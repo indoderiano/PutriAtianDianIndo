@@ -14,7 +14,6 @@ app.use(cors())
 
 
 app.get('/',(req,res)=>{
-    return res.send("<h1 style='text-align:center; margin-top:100px;'>Application Program Interface</h1>")
     return res.send("<h1 style='text-align:center; margin-top:100px;'>API by Indo</h1>")
 })
 
