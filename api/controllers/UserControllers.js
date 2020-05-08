@@ -11,10 +11,5 @@ module.exports={
         })
         // res.status(200).send({data:'test'})
     },
-    empty:(req,res)=>{
-        // nothing
-        res.status(500).send({data:'empty2'})
-        res.status(200).send({data:'empty'})
-
-    }
+    
 }
