@@ -52,6 +52,7 @@ export default function SignUp() {
   const classes = useStyles();
 
   const [username,setusername] = useState('')
+  const [email,setemail] = useState('')
   const [password,setpassword] = useState('')
   const [confirm,setconfirm] = useState('')
 
@@ -62,11 +63,13 @@ export default function SignUp() {
 
   const onRegister=()=>{
     if(!username){
-        setmessage('username belum diisi')
+      setmessage('username belum diisi')
+    }else if(!email){
+      setemail('email belum diisi')
     }else if(!password){
-        setmessage('password belum diisi')
+      setmessage('password belum diisi')
     }else if(confirm!==password){
-        setmessage('confirm password tidak sesuai')
+      setmessage('confirm password tidak sesuai')
     }else {
         
     }
@@ -96,6 +99,20 @@ export default function SignUp() {
                 autoFocus
                 onChange={(e)=>{setusername(e.target.value)}}
                 value={username}
+              />
+            </Grid>
+            <Grid item xs={12} sm={12}>
+              <TextField
+                autoComplete="fname"
+                name="email"
+                variant="outlined"
+                required
+                fullWidth
+                id="firstName"
+                label="email"
+                autoFocus
+                onChange={(e)=>{setemail(e.target.value)}}
+                value={email}
               />
             </Grid>
             {/* <Grid item xs={12}>
