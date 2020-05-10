@@ -52,6 +52,7 @@ export default function SignUp() {
   const classes = useStyles();
 
   const [username,setusername] = useState('')
+  const [email,setemail] = useState('')
   const [password,setpassword] = useState('')
   const [confirm,setconfirm] = useState('')
 
@@ -61,6 +62,11 @@ export default function SignUp() {
 
 
   const onRegister=()=>{
+    var userdata={
+      username,
+      email,
+      password
+    }
     if(!username){
         setmessage('username belum diisi')
     }else if(!password){
@@ -68,7 +74,12 @@ export default function SignUp() {
     }else if(confirm!==password){
         setmessage('confirm password tidak sesuai')
     }else {
-        
+        Axios(`${APIURL}/register`,userdata)
+        .then((res)=>{
+          console.log(res.data)
+        }).catch((err)=>{
+          console.log(err)
+        })
     }
   }
 
@@ -96,6 +107,20 @@ export default function SignUp() {
                 autoFocus
                 onChange={(e)=>{setusername(e.target.value)}}
                 value={username}
+              />
+            </Grid>
+            <Grid item xs={12} sm={12}>
+              <TextField
+                autoComplete="fname"
+                name="email"
+                variant="outlined"
+                required
+                fullWidth
+                id="firstName"
+                label="email"
+                autoFocus
+                onChange={(e)=>{setemail(e.target.value)}}
+                value={email}
               />
             </Grid>
             {/* <Grid item xs={12}>
