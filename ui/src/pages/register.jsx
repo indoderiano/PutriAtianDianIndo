@@ -55,7 +55,7 @@ export default function SignUp() {
   const [password,setpassword] = useState('')
   const [confirm,setconfirm] = useState('')
 
-  const [message,setmessage] = useState('test')
+  const [message,setmessage] = useState('test master')
 
   const APIURL='http://localhost:5000'
 
