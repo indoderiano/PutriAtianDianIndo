@@ -1,15 +1,13 @@
-// connection
+const mysql=require('mysql')
 
-// const mysql=require('mysql')
 // const db=mysql.createConnection({
 //     host:'localhost',
-//     user:'root',
-//     password:'maungapain',
-//     database:'ujianbackend',
+//     user:'Scherzie',
+//     password:'ch3v@l!nSQL80',
+//     database:'tugaskelompok',
 //     port:'3306'
 // })
 
-const mysql=require('mysql')
 const db=mysql.createConnection({
     host:'db4free.net',
     user:'mde50526',
