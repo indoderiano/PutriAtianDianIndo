@@ -11,7 +11,4 @@ module.exports={
         })
         // res.status(200).send({data:'test'})
     },
-    testindo:(req,res)=>{
-        console.log('test')
-    }
 }
